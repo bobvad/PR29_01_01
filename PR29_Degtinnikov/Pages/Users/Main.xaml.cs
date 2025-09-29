@@ -14,22 +14,23 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PR29_Degtinnikov.Pages.Clubs
+namespace PR29_Degtinnikov.Pages.Users
 {
     /// <summary>
     /// Логика взаимодействия для Main.xaml
     /// </summary>
     public partial class Main : Page
     {
-        public ClubsContext AllClub = new ClubsContext();
+        public UserContext AllUsers = new UserContext();
         public Main()
         {
             InitializeComponent();
-            foreach (Models.Clubs Club in AllClub.Clubs)
-                Parent.Children.Add(new Elements.Item(Club,this));
+            foreach (Models.Users users in AllUsers.Users)
+                Parent.Children.Add(new Elements.Item(users, this));
         }
-
-        private void AddClub(object sender, RoutedEventArgs e)
-        => MainWindow.init.OpenPages(new Pages.Clubs.Add(this));
+        private void AddUser(object sender, RoutedEventArgs e)
+        {
+            MainWindow.init.OpenPages(new Pages.Users.Add(this));
+        }
     }
 }

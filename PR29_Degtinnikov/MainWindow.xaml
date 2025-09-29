@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Button 
+            Click="Clubs"
+            Height="25"
+            Content="Клубы"
+            VerticalAlignment="Top"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            Width="100"
+            Background="#FF46FD00"
+            BorderBrush="#FF46FD00"
+            Foreground="White"/>
+        <Button 
+            Click="Users"
+            Height="25"
+            Content="Пользователи"
+            VerticalAlignment="Top"
+            Margin="115,10,0,0"
+            HorizontalAlignment="Left"
+            Width="100"
+            Background="#FF46FD00"
+BorderBrush="#FF46FD00"
+Foreground="White"/>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Margin="0,40,0,0"/>
     </Grid>
 </Window>

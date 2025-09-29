@@ -20,7 +20,7 @@
                  Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
             <Button Click="Clubs" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="5,-48,4,0" 
                 Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
-            <Button Click="Users" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="106,-48,-101,0" 
+            <Button Click="Users" Height="25" Content="Пользователь" VerticalAlignment="Top" Margin="106,-48,-101,0" 
                 Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
         </Grid>
 
