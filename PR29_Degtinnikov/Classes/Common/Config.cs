@@ -1,0 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PR29_Degtinnikov.Classes.Common
+{
+    public class Config
+    {
+        public static string ConnectionConfig = "server=";
+        public static MySqlServerVersion Version = new MySqlServerVersion(new Version(8,0,11));
+    }
+}
