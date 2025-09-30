@@ -21,10 +21,10 @@
         <Button
             x:Name="Button"
             Click="AddClub"
-            Height="25"
+            Height="26"
             Content="Добавить"
             VerticalAlignment="Center"
-            Margin="652,0,0,0"
+            Margin="623,0,0,0"
             HorizontalAlignment="Left"
             Width="100"
             Background="#FF46FD00"

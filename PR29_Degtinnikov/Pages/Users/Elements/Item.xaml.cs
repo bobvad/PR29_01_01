@@ -21,8 +21,8 @@ namespace PR29_Degtinnikov.Pages.Users.Elements
     /// </summary>
     public partial class Item : UserControl
     {
-        public ClubsContext AllClub = new ClubsContext();
-        Main Main;
+        public CompUsersContext AllClub = new CompUsersContext();
+        Pages.Users.Main Main;
         Models.Users User;
         public Item(Models.Users User,Main Main)
         {

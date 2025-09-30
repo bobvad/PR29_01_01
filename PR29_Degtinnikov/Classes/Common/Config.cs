@@ -9,7 +9,7 @@ namespace PR29_Degtinnikov.Classes.Common
 {
     public class Config
     {
-        public static string ConnectionConfig = "server=";
+        public static string ConnectionConfig = "server=127.0.0.1;uid=root;pwd=; database=pcClub";
         public static MySqlServerVersion Version = new MySqlServerVersion(new Version(8,0,11));
     }
 }

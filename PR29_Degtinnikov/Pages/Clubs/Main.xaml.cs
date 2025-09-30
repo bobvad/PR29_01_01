@@ -21,15 +21,16 @@ namespace PR29_Degtinnikov.Pages.Clubs
     /// </summary>
     public partial class Main : Page
     {
-        public ClubsContext AllClub = new ClubsContext();
-        public Main()
-        {
-            InitializeComponent();
-            foreach (Models.Clubs Club in AllClub.Clubs)
-                Parent.Children.Add(new Elements.Item(Club,this));
-        }
+            public Classes.CompUsersContext AllClub = new CompUsersContext();
 
-        private void AddClub(object sender, RoutedEventArgs e)
-        => MainWindow.init.OpenPages(new Pages.Clubs.Add(this));
+            public Main()
+            {
+                InitializeComponent();
+                foreach (Models.Clubs Club in AllClub.Clubs)
+                    Parent.Children.Add(new Pages.Clubs.Elements.Item(this, Club));
+            }
+
+            private void AddClub(object sender, RoutedEventArgs e)
+            => MainWindow.init.OpenPages(new Pages.Clubs.Add(this)); 
     }
 }

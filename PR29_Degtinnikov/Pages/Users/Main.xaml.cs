@@ -21,7 +21,7 @@ namespace PR29_Degtinnikov.Pages.Users
     /// </summary>
     public partial class Main : Page
     {
-        public UserContext AllUsers = new UserContext();
+        public Classes.CompUsersContext AllUsers = new CompUsersContext();
         public Main()
         {
             InitializeComponent();

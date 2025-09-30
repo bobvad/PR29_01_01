@@ -20,9 +20,9 @@ namespace PR29_Degtinnikov.Pages.Clubs.Elements
     /// </summary>
     public partial class Item : UserControl
     {
-        Main Main;
+        Pages.Clubs.Main Main;
         Models.Clubs Club;
-        public Item(Models.Clubs Club,Main main)
+        public Item( Pages.Clubs.Main Main,Models.Clubs Club)
         {
             InitializeComponent();
             this.Name.Text = Club.Name;

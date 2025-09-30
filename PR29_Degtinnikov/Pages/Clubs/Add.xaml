@@ -14,32 +14,28 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="0,69,0,0">
+        <Grid Grid.Column="0" Margin="0,39,0,0">
             <Image Width="88" Height="55" VerticalAlignment="Top" Margin="6,33,6,0" Source="/Images/ic_comp.jpg"/>
             <Button x:Name="BthAdd" Click="AddClub" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="10,95,10,0" 
                  Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
-            <Button Click="Clubs" Height="25" Content="Добавить" VerticalAlignment="Top" Margin="5,-48,4,0" 
-                Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
-            <Button Click="Users" Height="25" Content="Пользователь" VerticalAlignment="Top" Margin="106,-48,-101,0" 
-                Background="#FF46FD00" BorderBrush="#FF46FD00" Foreground="White"/>
         </Grid>
 
-        <Grid Grid.Column="1" Margin="0,66,0,0">
+        <Grid Grid.Column="1" Margin="0,38,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Label Content="Наименование:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="11,23,0,0"/>
-            <TextBox x:Name="Name" Text="Наименование" VerticalAlignment="Top" Margin="10,50,10,0" Height="25" 
-                  VerticalContentAlignment="Center" IsEnabled="False"/>
+            <TextBox x:Name="Name" VerticalAlignment="Top" Margin="10,50,10,0" Height="25" 
+                  VerticalContentAlignment="Center" />
             <Label Content="Адрес" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="11,80,0,0" Width="107"/>
-            <TextBox x:Name="Address" Text="Адрес" VerticalAlignment="Top" Margin="10,106,10,0" Height="25" 
-                  VerticalContentAlignment="Center" IsEnabled="False"/>
+            <TextBox x:Name="Address"  VerticalAlignment="Top" Margin="10,106,10,0" Height="25" 
+                  VerticalContentAlignment="Center" />
 
             <Label Content="Время работы:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="11,23,0,0" Grid.Column="1"/>
-            <TextBox x:Name="WorkTime" Text="Время работы" VerticalAlignment="Top" Margin="10,50,10,0" Height="81" 
-                  VerticalContentAlignment="Center" Grid.Column="1" IsEnabled="False"/>
+            <TextBox x:Name="WorkTime"  VerticalAlignment="Top" Margin="10,50,10,0" Height="81" 
+                  VerticalContentAlignment="Center" Grid.Column="1" />
         </Grid>
     </Grid>
 </Page>

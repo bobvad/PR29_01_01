@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PR29_Degtinnikov.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,13 @@ namespace PR29_Degtinnikov.Pages.Clubs
     /// </summary>
     public partial class Add : Page
     {
-        Main Main;
         Models.Clubs Club;
-        public Add(Main Main,Models.Clubs Club = null)
+        Pages.Clubs.Main Main;
+        public Add(Pages.Clubs.Main Main, Models.Clubs Club = null)
         {
             InitializeComponent();
             this.Main = Main;
+            this.Club = Club;
             if(Club != null)
             {
                 this.Club = Club;
@@ -38,21 +40,38 @@ namespace PR29_Degtinnikov.Pages.Clubs
 
         private void AddClub(object sender, RoutedEventArgs e)
         {
-            if(Club != null)
+            if (Main == null)
             {
-                Club = new Models.Clubs();
+                var tempContext = new CompUsersContext();
+
+                if (Club == null)
+                {
+                    Club = new Models.Clubs();
+                    tempContext.Clubs.Add(Club);
+                }
+
                 Club.Name = this.Name.Text;
                 Club.Address = this.Address.Text;
                 Club.WorkTime = this.WorkTime.Text;
-                this.Main.AllClub.Clubs.Add(Club);
+
+                tempContext.SaveChanges();
             }
             else
             {
-                Club.Name = this.Name.Text;
-                Club.Address = Address.Text;
-                Club.WorkTime = WorkTime.Text;
+                if (Club == null)
+                {
+                    Club = new Models.Clubs();
+                    this.Main.AllClub.Clubs.Add(Club);
+                }
+                else
+                {
+                    Club.Name = this.Name.Text;
+                    Club.Address = Address.Text;
+                    Club.WorkTime = WorkTime.Text;
+                }
+                this.Main.AllClub.SaveChanges();
             }
-            this.Main.AllClub.SaveChanges();
+
             MainWindow.init.OpenPages(new Pages.Clubs.Main());
         }
     }

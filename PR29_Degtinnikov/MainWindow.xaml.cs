@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using PR29_Degtinnikov.Pages.Clubs;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,6 +18,10 @@ namespace PR29_Degtinnikov
     public partial class MainWindow : Window
     {
         public static MainWindow init;
+        Main Main;
+        Pages.Users.Main Mains;
+        Models.Clubs Club;
+        Models.Users users;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,13 +34,10 @@ namespace PR29_Degtinnikov
         }
 
         private void Clubs(object sender, RoutedEventArgs e)
-        {
-            OpenPages(new Pages.Clubs.Main());
-        }
+        => OpenPages(new Pages.Clubs.Add(Main,Club));
+        
 
         private void Users(object sender, RoutedEventArgs e)
-        {
-            OpenPages(new Pages.Users.Main());
-        }
+        => OpenPages(new Pages.Users.Add(Mains,users));
     }
 }
